@@ -1,6 +1,6 @@
 # NotesVault
 
-NotesVault is a Smart Notes Management System developed using Java, JSP, Servlets, JDBC, and MySQL.
+NotesVault is a Smart Notes Management System developed using Java, JSP, Servlets, JDBC, and MySQL. It allows users to securely manage notes, upload PDF files, download study materials, and organize academic content efficiently.
 
 ## Features
 
@@ -8,9 +8,12 @@ NotesVault is a Smart Notes Management System developed using Java, JSP, Servlet
 - Add Notes
 - Edit Notes
 - Delete Notes
+- upload PDF Notes
+- Download PDF Notes
 - View Notes
 - User Profile Management
 - Dark Mode Support
+- Secure Session Management
 
 ## Technologies Used
 
