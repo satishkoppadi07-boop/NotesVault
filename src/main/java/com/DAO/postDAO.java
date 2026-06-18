@@ -42,50 +42,57 @@ public class postDAO {
 		return f;
 	}
 
-	public List<post> getData(int uid) {
-		List<post> list = new ArrayList<>();
-		try {
-			String query = "SELECT * FROM post WHERE uid = ? order by id DESC";
-			PreparedStatement ps = conn.prepareStatement(query);
-			ps.setInt(1, uid);
-			ResultSet rs = ps.executeQuery();
+	public List<post> getData() {
 
-			while (rs.next()) {
-				post po = new post();
-				po.setId(rs.getInt("id"));				po.setCategory(rs.getString("category"));
-				po.setCollege(rs.getString("college"));
-				po.setBranch(rs.getString("branch"));
-				po.setSemester(rs.getString("semester"));
-				po.setContent(rs.getString("content"));
-				po.setPdate(rs.getTimestamp("date"));
-				po.setPdfFile(rs.getString("pdf_file"));
+	    List<post> list = new ArrayList<>();
 
-				UserDetails user = new UserDetails();
-				user.setId(rs.getInt("uid"));
-				po.setUser(user);
+	    try {
 
-				list.add(po);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return list;
+	        String query = "SELECT * FROM post ORDER BY id DESC";
+
+	        PreparedStatement ps = conn.prepareStatement(query);
+
+	        ResultSet rs = ps.executeQuery();
+
+	        while (rs.next()) {
+
+	            post po = new post();
+
+	            po.setId(rs.getInt("id"));
+	            po.setCategory(rs.getString("category"));
+	            po.setCollege(rs.getString("college"));
+	            po.setBranch(rs.getString("branch"));
+	            po.setSemester(rs.getString("semester"));
+	            po.setContent(rs.getString("content"));
+	            po.setPdate(rs.getTimestamp("date"));
+	            po.setPdfFile(rs.getString("pdf_file"));
+	            
+	            UserDetails user = new UserDetails();
+	            user.setId(rs.getInt("uid"));
+	            po.setUser(user);
+
+	            list.add(po);
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return list;
 	}
 	
-	public List<post> searchByCategory(int uid, String category) {
+	public List<post> searchByCategory(String category) {
 
 	    List<post> list = new ArrayList<>();
 
 	    try {
 
 	        String query =
-	        "SELECT * FROM post WHERE uid=? AND LOWER(category) LIKE LOWER(?) ORDER BY id DESC";
+	        "SELECT * FROM post WHERE LOWER(category) LIKE LOWER(?) ORDER BY id DESC";
 
 	        PreparedStatement ps = conn.prepareStatement(query);
 
-	        ps.setInt(1, uid);
-
-	        ps.setString(2, "%" + category.trim() + "%");
+	        ps.setString(1, "%" + category.trim() + "%");
 
 	        ResultSet rs = ps.executeQuery();
 
@@ -99,11 +106,9 @@ public class postDAO {
 	            po.setPdate(rs.getTimestamp("date"));
 	            po.setCategory(rs.getString("category"));
 	            po.setPdfFile(rs.getString("pdf_file"));
-
+	            
 	            UserDetails user = new UserDetails();
-
 	            user.setId(rs.getInt("uid"));
-
 	            po.setUser(user);
 
 	            list.add(po);
@@ -115,7 +120,7 @@ public class postDAO {
 
 	    return list;
 	}
-
+	
 	public post getDataById(int noteid) {
 		post p = null;
 		try {

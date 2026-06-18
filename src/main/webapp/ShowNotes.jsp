@@ -20,11 +20,11 @@ List<post> list;
 
 if(category != null && category.trim().length() > 0) {
 
-    list = dao.searchByCategory(user3.getId(), category);
+    list = dao.searchByCategory(category);
 
 } else {
 
-    list = dao.getData(user3.getId());
+    list = dao.getData();
 }
 %>
 <!DOCTYPE html>
@@ -123,11 +123,21 @@ if(p.getPdfFile() != null && !p.getPdfFile().trim().isEmpty()
 						<p>
 							<b class="text-success">Published On: <%=p.getPdate()%></b>
 						</p>
-						<div class="container text-center mt-2">
-							<a href="DeleteServlet?note_id=<%=p.getId()%>"
-								class="btn btn-danger">Delete</a> <a
-								href="edit.jsp?note_id=<%=p.getId()%>" class="btn btn-primary">Edit</a>
-						</div>
+						<%
+if(p.getUser() != null && p.getUser().getId() == user3.getId()){
+%>
+
+<div class="container text-center mt-2">
+    <a href="DeleteServlet?note_id=<%=p.getId()%>"
+        class="btn btn-danger">Delete</a>
+
+    <a href="edit.jsp?note_id=<%=p.getId()%>"
+        class="btn btn-primary">Edit</a>
+</div>
+
+<%
+}
+%>
 					</div>
 				</div>
 			</div>

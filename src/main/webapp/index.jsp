@@ -23,7 +23,7 @@
   <div class="text-center">
     <h1 class="text-white">NotesVault</h1>
     <a href="login.jsp" class="btn btn-light">Login</a>
-    <a href="adminLogin.jsp" class="btn btn-danger">Admin Login</a>s
+    <%-- <a href="adminLogin.jsp" class="btn btn-danger">Admin Login</a> --%>
     <a href="register.jsp" class="btn btn-light">Register</a>
   </div>
 </div>
