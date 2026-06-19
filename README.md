@@ -34,6 +34,26 @@ NotesVault is a Smart Notes Management System developed using Java, JSP, Servlet
 3. Configure MySQL Database
 4. Run on Apache Tomcat
 
+## Screenshots
+
+### Home Page
+![Home Page](home-page.jpg.jpeg)
+
+### Registration Page
+![Registration Page](register-page.jpg.jpeg)
+
+### Login Page
+![Login Page](login-page.jpg.jpeg)
+
+### Dashboard
+![Dashboard](dashboard.jpg.jpeg)
+
+### Add Notes
+![Add Notes](add-note.jpg.jpeg)
+
+### Show Notes
+![Show Notes](show-note.jpg.jpeg)
+
 ## Author
 
 Koppadi Satish  
