@@ -37,23 +37,22 @@ NotesVault is a Smart Notes Management System developed using Java, JSP, Servlet
 ## Screenshots
 
 ### Home Page
-![Home Page](home-page.jpg.jpeg)
+<img src="https://raw.githubusercontent.com/satishkoppadi07-boop/NotesVault/main/home-page.jpg.jpeg" width="800"/>
 
 ### Registration Page
-![Registration Page](register-page.jpg.jpeg)
+<img src="https://raw.githubusercontent.com/satishkoppadi07-boop/NotesVault/main/register-page.jpg.jpeg" width="800"/>
 
 ### Login Page
-![Login Page](login-page.jpg.jpeg)
+<img src="https://raw.githubusercontent.com/satishkoppadi07-boop/NotesVault/main/login-page.jpg.jpeg" width="800"/>
 
 ### Dashboard
-![Dashboard](dashboard.jpg.jpeg)
+<img src="https://raw.githubusercontent.com/satishkoppadi07-boop/NotesVault/main/dashboard.jpg.jpeg" width="800"/>
 
 ### Add Notes
-![Add Notes](add-note.jpg.jpeg)
+<img src="https://raw.githubusercontent.com/satishkoppadi07-boop/NotesVault/main/add-note.jpg.jpeg" width="800"/>
 
 ### Show Notes
-![Show Notes](show-note.jpg.jpeg)
-
+<img src="https://raw.githubusercontent.com/satishkoppadi07-boop/NotesVault/main/show-note.jpg.jpeg" width="800"/>
 ## Author
 
 Koppadi Satish  
