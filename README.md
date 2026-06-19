@@ -37,7 +37,7 @@ NotesVault is a Smart Notes Management System developed using Java, JSP, Servlet
 ## Screenshots
 
 ### Home Page
-![Home Page](home-page.jpg.jpeg)
+![Home Page](home-page. jpg.jpeg)
 
 ### Registration Page
 ![Registration Page](register-page.jpg.jpeg)
